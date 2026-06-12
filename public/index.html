@@ -70,34 +70,73 @@
           d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
         />
       </symbol>
+      <symbol
+        id="chevron-down"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+        />
+      </symbol>
+      <symbol
+        id="chevron-up"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 15.75 7.5-7.5 7.5 7.5"
+        />
+      </symbol>
     </svg>
     <header
       class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-24 mx-auto pr-10 pl-10 py-5 bg-black/50 rounded-3xl"
     >
       <div class="flex justify-between items-center w-full">
         <!-- Logo & Menu -->
-        <nav class="flex items-center gap-x-9">
+        <nav class="flex items-center gap-x-9 h-14">
           <!-- Logo -->
           <div>
             <img src="./images/app-logo.png" alt="Golden Coffee" />
           </div>
           <!-- Menu -->
-          <ul class="flex gap-x-9 text-xl font-dana text-gray-300">
+          <ul
+            class="flex gap-x-9 text-xl font-dana text-gray-300 tracking-tightest h-full *:leading-14 *:hover:text-orange-200"
+          >
             <li class="font-medium text-orange-200">
               <a href="#">صفحه اصلی</a>
             </li>
             <!-- Has Sub Menu -->
-            <li>
-              <a href="#">فروشگاه</a>
+            <li class="relative group">
+              <a href="#" class="flex items-center gap-x-2"
+                >فروشگاه
+                <svg class="w-5 h-5">
+                  <use xlink:href="#chevron-down"></use>
+                </svg>
+              </a>
               <!-- Sub Menu -->
-              <ul class="hidden">
-                <li><a href="">قهوه ویژه</a></li>
-                <li><a href="">قهوه در سطح جهانی</a></li>
-                <li><a href="">قهوه درجه یک</a></li>
-                <li><a href="">ترکیبات جهانی</a></li>
-                <li><a href="">کپسول قهوه</a></li>
-                <li><a href="">قهوه زینو برزیلی</a></li>
-              </ul>
+              <div
+                class="absolute top-full w-52 p-6 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible space-y-4 text-zinc-700 dark:text-white text-base bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal tracking-normal *:block *:transition-colors *:hover:text-orange-300"
+              >
+                <a href="#">قهوه ویژه</a>
+                <a href="#">قهوه در سطح جهانی</a>
+                <a href="#">قهوه درجه یک</a>
+                <a href="#">ترکیبات جهانی</a>
+                <a href="#">کپسول قهوه</a>
+                <a href="#">قهوه زینو برزیلی</a>
+              </div>
             </li>
             <li><a href="#">دیکشنری</a></li>
             <li><a href="#">بلاگ</a></li>
