@@ -1,7 +1,10 @@
-@import "tailwindcss";
 @import "./fonts.css";
+@import "tailwindcss";
 
 @theme {
+  --variant-dark: .dark &;
+  /* --variant-light: &: not(.dark) &; */
+
   --color-brown-100: #ece0d1;
   --color-brown-300: #dbc1ac;
   --color-brown-600: #967259;
@@ -20,6 +23,11 @@
   --color-line-orange: #fed7aa;
   --color-line-white-10: rgba(255, 255, 255, 0.1);
 
-  --font-vazirmatn: "Vazirmatn", sans-serif;
-  --font-pinar: "Pinar", sans-serif;
+  --font-dana: "Dana", sans-serif;
+  --font-morabba: "Morabba", sans-serif;
 }
+/* @layer base {
+  body {
+    @apply font-dana;
+  }
+} */
