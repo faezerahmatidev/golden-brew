@@ -2,9 +2,10 @@
 @import "./input.css";
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --variant-dark: .dark &;
-  /* --variant-light: &: not(.dark) &; */
+  /* --variant-dark: .dark &; */
 
   --color-brown-100: #ece0d1;
   --color-brown-300: #dbc1ac;
@@ -31,8 +32,9 @@
 
   --shadow-normal: 0 1px 10px rgba(0, 0, 0, 0.05);
 }
-/* @layer base {
-  body {
-    @apply font-dana;
+
+@layer base {
+  * {
+    @apply transition-colors duration-250;
   }
-} */
+}
