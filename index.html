@@ -107,6 +107,21 @@
           d="m4.5 15.75 7.5-7.5 7.5 7.5"
         />
       </symbol>
+      <symbol
+        id="chevron-left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5 8.25 12l7.5-7.5"
+        />
+      </symbol>
     </svg>
     <header
       class="fixed top-9 right-0 left-0 flex items-center w-[90%] h-24 mx-auto pr-10 pl-10 py-5 bg-black/50 rounded-3xl"
@@ -156,15 +171,89 @@
           <!-- Cart Icon & Theme Switch Btn -->
           <div class="flex items-center gap-x-5">
             <!-- Cart -->
-            <div>
+            <div class="relative group">
               <!-- Cart Icon Hover -->
               <div class="py-3 cursor-pointer">
                 <svg class="w-8 h-8">
                   <use href="#shopping-cart"></use>
                 </svg>
               </div>
-              <!-- Cart Box -->
-              <div></div>
+              <!-- Cart Box Opacity-0 Invisible -->
+              <div
+                class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-100 p-5 bg-white dark:bg-zinc-700 border-t-[3px] border-t-orange-300 shadow-normal rounded-2xl"
+              >
+                <!-- Cart Header -->
+                <div
+                  class="flex justify-between items-center font-dana font-medium text-xs tracking-tighter"
+                >
+                  <span class="text-gray-300">1 مورد</span>
+                  <a href="#" class="flex items-center text-orange-300"
+                    >مشاهده سبد خرید
+                    <svg class="w-4 h-4">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+                <!-- Cart Body -->
+                <div
+                  class="pb-1 border-b border-b-gray-300 dark:border-b-white/10 divide-y divide-gray-100 dark:divide-white/10 *:py-5"
+                >
+                  <div class="flex gap-x-2.5">
+                    <img
+                      class="w-30 h-30"
+                      src="public/images/products/p1.png"
+                      alt="product 1"
+                    />
+                    <div class="flex flex-col justify-between">
+                      <h4
+                        class="font-dana font-medium text-zinc-700 text-base dark:text-white"
+                      >
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                      <div>
+                        <span
+                          class="text-teal-600 text-xs dark:text-emerald-500 tracking-tighter"
+                          >14.500 تومان تخفیف</span
+                        >
+                        <div
+                          class="text-zinc-700 font-dana font-semibold dark:text-white"
+                        >
+                          175.000
+                          <span class="font-dana text-sm">تومان</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-x-2.5">
+                    <img
+                      class="w-30 h-30"
+                      src="public/images/products/p2.png"
+                      alt="product 2"
+                    />
+                    <div class="flex flex-col justify-between">
+                      <h4
+                        class="font-dana font-medium text-zinc-700 text-base dark:text-white"
+                      >
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                      <div>
+                        <span
+                          class="text-teal-600 text-xs dark:text-emerald-500 tracking-tighter"
+                          >14.500 تومان تخفیف</span
+                        >
+                        <div
+                          class="text-zinc-700 font-dana font-semibold dark:text-white"
+                        >
+                          175.000
+                          <span class="font-dana text-sm">تومان</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Cart Footer -->
+                <div class=""></div>
+              </div>
             </div>
             <!-- Theme Switch Btn -->
             <div class="cursor-pointer" id="toggle-theme">
