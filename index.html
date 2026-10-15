@@ -15,6 +15,11 @@
     </script>
   </head>
   <body class="bg-gray-100 dark:bg-zinc-800">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:right-2 focus:z-[80] focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:text-zinc-800"
+      >پرش به محتوای اصلی</a
+    >
     <!-- All App Icons class="w-8 h-8 " -->
     <svg style="display: none">
       <symbol
@@ -364,7 +369,7 @@
               </a>
               <!-- Sub Menu -->
               <div
-                class="absolute top-full w-52 p-6 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible space-y-4 text-zinc-700 dark:text-white text-base bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal tracking-normal *:inline-block *:transition-colors *:hover:text-orange-300"
+                class="absolute top-full w-52 p-6 opacity-0 invisible transition-all group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible space-y-4 text-zinc-700 dark:text-white text-base bg-white dark:bg-zinc-700 rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal tracking-normal *:inline-block *:transition-colors *:hover:text-orange-300"
               >
                 <a href="#">قهوه ویژه</a>
                 <a href="#">قهوه در سطح جهانی</a>
@@ -394,7 +399,7 @@
               </div>
               <!-- Cart Box Opacity-0 Invisible -->
               <div
-                class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-100 p-5 bg-white dark:bg-zinc-700 border-t-[3px] border-t-orange-300 shadow-normal rounded-2xl"
+                class="absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible w-100 p-5 bg-white dark:bg-zinc-700 border-t-[3px] border-t-orange-300 shadow-normal rounded-2xl"
               >
                 <!-- Cart Header -->
                 <div
@@ -416,7 +421,7 @@
                     <img
                       class="w-30 h-30"
                       src="public/images/products/p1.png"
-                      alt="product 1"
+                      alt="قهوه اسپرسو بن مانو مدل پریسکا"
                     />
                     <div class="flex flex-col justify-between">
                       <h4
@@ -442,7 +447,7 @@
                     <img
                       class="w-30 h-30"
                       src="public/images/products/p2.png"
-                      alt="product 2"
+                      alt="قهوه اسپرسو بن مانو مدل پریسکا"
                     />
                     <div class="flex flex-col justify-between">
                       <h4
@@ -487,19 +492,19 @@
               </div>
             </div>
             <!-- Theme Switch Btn -->
-            <div class="cursor-pointer" id="toggle-theme">
+            <button type="button" aria-label="تغییر تم" class="cursor-pointer" id="toggle-theme">
               <svg class="inline-block dark:hidden w-8 h-8">
                 <use href="#moon"></use>
               </svg>
               <svg class="hidden dark:inline-block w-8 h-8">
                 <use href="#sun"></use>
               </svg>
-            </div>
+            </button>
           </div>
           <!-- Divide Border -->
           <span class="block w-px h-14 bg-white/20"></span>
           <!-- Login Link -->
-          <a href="" class="flex items-center gap-x-2.5">
+          <a href="#" class="flex items-center gap-x-2.5">
             <svg class="w-8 h-8">
               <use href="#arrow-right-end-on-rectangle"></use>
             </svg>
@@ -509,7 +514,7 @@
       </div>
       <!-- Mobile Bar -->
       <div class="flex lg:hidden justify-between items-center w-full">
-        <button id="open-nav" class="text-orange-200 cursor-pointer">
+        <button id="open-nav" aria-label="باز کردن منو" aria-expanded="false" aria-controls="nav-sidebar" class="text-orange-200 cursor-pointer">
           <svg class="w-7 h-7">
             <use href="#bars-3"></use>
           </svg>
@@ -519,7 +524,7 @@
           alt="Golden Coffee"
           class="h-8"
         />
-        <button id="open-cart" class="text-orange-200 cursor-pointer">
+        <button id="open-cart" aria-label="باز کردن سبد خرید" class="text-orange-200 cursor-pointer">
           <svg class="w-7 h-7">
             <use href="#shopping-cart"></use>
           </svg>
@@ -534,6 +539,7 @@
     <!-- Mobile Nav Sidebar (slides from right) -->
     <aside
       id="nav-sidebar"
+      aria-label="منوی ناوبری"
       class="fixed top-0 bottom-0 right-0 z-[70] w-72 max-w-[85%] translate-x-full transition-transform duration-300 bg-white dark:bg-zinc-800 text-zinc-700 dark:text-white flex flex-col lg:hidden"
     >
       <div
@@ -544,7 +550,7 @@
           alt="Golden Coffee"
           class="h-9"
         />
-        <button id="close-nav" class="cursor-pointer">
+        <button id="close-nav" aria-label="بستن منو" class="cursor-pointer">
           <svg class="w-6 h-6">
             <use href="#x-mark"></use>
           </svg>
@@ -641,13 +647,14 @@
     <!-- Mobile Cart Sidebar (slides from left) -->
     <aside
       id="cart-sidebar"
+      aria-label="سبد خرید"
       class="fixed top-0 bottom-0 left-0 z-[70] w-80 max-w-[85%] -translate-x-full transition-transform duration-300 bg-white dark:bg-zinc-800 text-zinc-700 dark:text-white flex flex-col lg:hidden"
     >
       <div
         class="flex items-center justify-between p-5 border-b border-gray-100 dark:border-white/10"
       >
         <span class="font-dana font-medium">سبد خرید</span>
-        <button id="close-cart" class="cursor-pointer">
+        <button id="close-cart" aria-label="بستن سبد خرید" class="cursor-pointer">
           <svg class="w-6 h-6">
             <use href="#x-mark"></use>
           </svg>
@@ -659,7 +666,7 @@
         <div class="flex gap-x-3 py-4">
           <img
             src="./public/images/products/p1.png"
-            alt="product 1"
+            alt="قهوه اسپرسو بن مانو مدل پریسکا"
             class="w-20 h-20 object-contain"
           />
           <div class="flex flex-col justify-between py-1">
@@ -680,7 +687,7 @@
         <div class="flex gap-x-3 py-4">
           <img
             src="./public/images/products/p2.png"
-            alt="product 2"
+            alt="قهوه اسپرسو بن مانو مدل پریسکا"
             class="w-20 h-20 object-contain"
           />
           <div class="flex flex-col justify-between py-1">
@@ -715,7 +722,7 @@
         >
       </div>
     </aside>
-    <main>
+    <main id="main-content">
       <!-- Hero -->
       <section
         class="hero-bg relative flex flex-col justify-center min-h-[85vh] md:min-h-screen pt-36 md:pt-40 pb-40 md:pb-52"
@@ -750,6 +757,7 @@
       >
         <a
           href="#products"
+          aria-label="اسکرول به بخش محصولات"
           class="absolute -top-5 right-1/2 translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full border border-orange-300 bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white"
         >
           <svg class="w-5 h-5">
@@ -2159,6 +2167,7 @@
       >
         <a
           href="#top"
+          aria-label="بازگشت به بالای صفحه"
           class="absolute -top-5 right-1/2 translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full bg-orange-300 text-white"
         >
           <svg class="w-5 h-5">

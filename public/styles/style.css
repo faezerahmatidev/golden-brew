@@ -274,6 +274,17 @@
   .invisible {
     visibility: hidden;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
   .absolute {
     position: absolute;
   }
@@ -1070,6 +1081,16 @@
       transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
+  .group-focus-within\:visible {
+    &:is(:where(.group):focus-within *) {
+      visibility: visible;
+    }
+  }
+  .group-focus-within\:opacity-100 {
+    &:is(:where(.group):focus-within *) {
+      opacity: 100%;
+    }
+  }
   .group-hover\:visible {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1114,6 +1135,63 @@
           color: var(--color-orange-300);
         }
       }
+    }
+  }
+  .focus\:not-sr-only {
+    &:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+      clip-path: none;
+      white-space: normal;
+    }
+  }
+  .focus\:absolute {
+    &:focus {
+      position: absolute;
+    }
+  }
+  .focus\:top-2 {
+    &:focus {
+      top: calc(var(--spacing) * 2);
+    }
+  }
+  .focus\:right-2 {
+    &:focus {
+      right: calc(var(--spacing) * 2);
+    }
+  }
+  .focus\:z-\[80\] {
+    &:focus {
+      z-index: 80;
+    }
+  }
+  .focus\:rounded-xl {
+    &:focus {
+      border-radius: var(--radius-xl);
+    }
+  }
+  .focus\:bg-white {
+    &:focus {
+      background-color: var(--color-white);
+    }
+  }
+  .focus\:px-4 {
+    &:focus {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .focus\:py-2 {
+    &:focus {
+      padding-block: calc(var(--spacing) * 2);
+    }
+  }
+  .focus\:text-zinc-800 {
+    &:focus {
+      color: var(--color-zinc-800);
     }
   }
   .sm\:block {
@@ -1640,6 +1718,19 @@
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     --tw-duration: 250ms;
     transition-duration: 250ms;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-orange-300);
+    outline-offset: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }
 @property --tw-translate-x {
