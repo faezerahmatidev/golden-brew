@@ -123,6 +123,21 @@
         />
       </symbol>
       <symbol
+        id="chevron-right"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m8.25 4.5 7.5 7.5-7.5 7.5"
+        />
+      </symbol>
+      <symbol
         id="star"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -1036,6 +1051,310 @@
               >قهوه ترک</span
             >
           </a>
+        </div>
+      </section>
+
+      <!-- Best Selling Products -->
+      <section class="bg-gray-100 dark:bg-zinc-800 pb-12 md:pb-20">
+        <div class="w-[90%] mx-auto">
+          <!-- Section Head -->
+          <div class="flex items-center justify-between mb-8 md:mb-12">
+            <div>
+              <h2
+                class="font-morabba font-medium text-2xl md:text-5xl text-zinc-700 dark:text-white"
+              >
+                محصولات پر فروش
+              </h2>
+              <p
+                class="font-morabba font-light text-sm md:text-2xl text-zinc-700 dark:text-white mt-2"
+              >
+                پیشنهاد قهوه خورها
+              </p>
+            </div>
+            <div class="flex items-center gap-x-3 md:gap-x-4">
+              <span
+                class="flex items-center justify-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white shadow-normal cursor-pointer"
+              >
+                <svg class="w-5 h-5 md:w-6 md:h-6">
+                  <use href="#chevron-right"></use>
+                </svg>
+              </span>
+              <span
+                class="flex items-center justify-center w-9 h-9 md:w-11 md:h-11 rounded-full bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white shadow-normal cursor-pointer"
+              >
+                <svg class="w-5 h-5 md:w-6 md:h-6">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <!-- Products Grid -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5 md:gap-5">
+            <!-- Card 1 : discount -->
+            <div
+              class="relative bg-white dark:bg-zinc-700 rounded-2xl p-3 md:p-5 shadow-normal"
+            >
+              <span
+                class="absolute top-2 right-2 font-dana text-xs text-white bg-orange-300 rounded-full px-2.5 py-1"
+                >12%</span
+              >
+              <div class="relative">
+                <img
+                  src="./public/images/products/p5.png"
+                  alt="قهوه دریپ بگ بن مانو مدل نرسکا"
+                  class="w-32 h-32 md:w-48 md:h-48 mx-auto object-contain"
+                />
+              </div>
+              <h3
+                class="font-dana font-medium text-sm md:text-base leading-6 text-zinc-700 dark:text-white text-center line-clamp-2 h-12 mt-4"
+              >
+                قهوه دریپ بگ بن مانو مدل نرسکا خط دوم اسم طولانی
+              </h3>
+              <div class="flex justify-center items-center gap-x-2 mt-2 h-6">
+                <span
+                  class="font-dana font-semibold text-sm md:text-xl text-teal-600 dark:text-emerald-500"
+                  >154,000</span
+                >
+                <span
+                  class="font-dana text-xs md:text-sm text-teal-600 dark:text-emerald-500"
+                  >تومان</span
+                >
+                <span
+                  class="font-dana text-xs text-gray-400 line-through"
+                  >175,000</span
+                >
+              </div>
+              <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-x-1 text-yellow-400">
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg
+                    class="w-4 h-4 md:w-5 md:h-5 text-gray-300 dark:text-gray-400"
+                  >
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+                <div class="flex items-center gap-x-2 text-gray-400">
+                  <span
+                    class="hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-white dark:bg-zinc-700 rounded-2xl p-3 md:p-5 shadow-normal"
+            >
+              <div class="relative">
+                <img
+                  src="./public/images/products/p6.png"
+                  alt="قهوه دریپ بگ بن مانو مدل نرسکا"
+                  class="w-32 h-32 md:w-48 md:h-48 mx-auto object-contain"
+                />
+              </div>
+              <h3
+                class="font-dana font-medium text-sm md:text-base leading-6 text-zinc-700 dark:text-white text-center line-clamp-2 h-12 mt-4"
+              >
+                قهوه دریپ بگ بن مانو مدل نرسکا خط دوم اسم طولانی
+              </h3>
+              <div class="flex justify-center items-center gap-x-2 mt-2 h-6">
+                <span
+                  class="font-dana font-semibold text-sm md:text-xl text-teal-600 dark:text-emerald-500"
+                  >175,000</span
+                >
+                <span
+                  class="font-dana text-xs md:text-sm text-teal-600 dark:text-emerald-500"
+                  >تومان</span
+                >
+              </div>
+              <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-x-1 text-yellow-400">
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                </div>
+                <div class="flex items-center gap-x-2 text-gray-400">
+                  <span
+                    class="hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-white dark:bg-zinc-700 rounded-2xl p-3 md:p-5 shadow-normal"
+            >
+              <div class="relative">
+                <img
+                  src="./public/images/products/p7.png"
+                  alt="قهوه دریپ بگ بن مانو مدل نرسکا"
+                  class="w-32 h-32 md:w-48 md:h-48 mx-auto object-contain"
+                />
+              </div>
+              <h3
+                class="font-dana font-medium text-sm md:text-base leading-6 text-zinc-700 dark:text-white text-center line-clamp-2 h-12 mt-4"
+              >
+                قهوه دریپ بگ بن مانو مدل نرسکا خط دوم اسم طولانی
+              </h3>
+              <div class="flex justify-center items-center gap-x-2 mt-2 h-6">
+                <span
+                  class="font-dana font-semibold text-sm md:text-xl text-teal-600 dark:text-emerald-500"
+                  >175,000</span
+                >
+                <span
+                  class="font-dana text-xs md:text-sm text-teal-600 dark:text-emerald-500"
+                  >تومان</span
+                >
+              </div>
+              <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-x-1 text-yellow-400">
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg
+                    class="w-4 h-4 md:w-5 md:h-5 text-gray-300 dark:text-gray-400"
+                  >
+                    <use href="#star"></use>
+                  </svg>
+                  <svg
+                    class="w-4 h-4 md:w-5 md:h-5 text-gray-300 dark:text-gray-400"
+                  >
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+                <div class="flex items-center gap-x-2 text-gray-400">
+                  <span
+                    class="hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div
+              class="bg-white dark:bg-zinc-700 rounded-2xl p-3 md:p-5 shadow-normal"
+            >
+              <div class="relative">
+                <img
+                  src="./public/images/products/p8.png"
+                  alt="قهوه دریپ بگ بن مانو مدل نرسکا"
+                  class="w-32 h-32 md:w-48 md:h-48 mx-auto object-contain"
+                />
+              </div>
+              <h3
+                class="font-dana font-medium text-sm md:text-base leading-6 text-zinc-700 dark:text-white text-center line-clamp-2 h-12 mt-4"
+              >
+                قهوه دریپ بگ بن مانو مدل نرسکا خط دوم اسم طولانی
+              </h3>
+              <div class="flex justify-center items-center gap-x-2 mt-2 h-6">
+                <span
+                  class="font-dana font-semibold text-sm md:text-xl text-teal-600 dark:text-emerald-500"
+                  >175,000</span
+                >
+                <span
+                  class="font-dana text-xs md:text-sm text-teal-600 dark:text-emerald-500"
+                  >تومان</span
+                >
+              </div>
+              <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-x-1 text-yellow-400">
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg class="w-4 h-4 md:w-5 md:h-5">
+                    <use href="#star-solid"></use>
+                  </svg>
+                  <svg
+                    class="w-4 h-4 md:w-5 md:h-5 text-gray-300 dark:text-gray-400"
+                  >
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+                <div class="flex items-center gap-x-2 text-gray-400">
+                  <span
+                    class="hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#arrows-right-left"></use>
+                    </svg>
+                  </span>
+                  <span
+                    class="flex items-center justify-center w-9 h-9 rounded-full bg-gray-100 dark:bg-zinc-800 hover:bg-teal-600 hover:text-white transition-colors cursor-pointer"
+                  >
+                    <svg class="w-5 h-5">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
