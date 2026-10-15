@@ -1053,8 +1053,8 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-10 {
-    opacity: 10%;
+  .opacity-\[0\.06\] {
+    opacity: 0.06;
   }
   .shadow-normal {
     --tw-shadow: 0 1px 10px var(--tw-shadow-color, rgba(0, 0, 0, 0.05));
@@ -1646,11 +1646,6 @@
       line-height: var(--tw-leading, var(--text-6xl--line-height));
     }
   }
-  .dark\:block {
-    &:where(.dark, .dark *) {
-      display: block;
-    }
-  }
   .dark\:hidden {
     &:where(.dark, .dark *) {
       display: none;
@@ -1728,6 +1723,11 @@
   .dark\:text-white {
     &:where(.dark, .dark *) {
       color: var(--color-white);
+    }
+  }
+  .dark\:opacity-20 {
+    &:where(.dark, .dark *) {
+      opacity: 20%;
     }
   }
   .dark\:brightness-\[2\] {
