@@ -1,5 +1,12 @@
-body {
+.hero-bg {
   background-image: url("../../public/images/headerBgDesktop.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center top;
+}
+
+@media (max-width: 768px) {
+  .hero-bg {
+    background-image: url("../../public/images/headerBgMobile.webp");
+  }
 }

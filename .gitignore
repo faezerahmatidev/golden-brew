@@ -11,3 +11,6 @@ dist/
 # System files
 .DS_Store
 Thumbs.db
+
+# Design sources - never push to GitHub
+figma/
