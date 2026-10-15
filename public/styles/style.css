@@ -76,6 +76,8 @@
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
@@ -265,6 +267,9 @@
   .relative {
     position: relative;
   }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .-top-5 {
     top: calc(var(--spacing) * -5);
   }
@@ -334,6 +339,9 @@
   .inline-block {
     display: inline-block;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
@@ -373,6 +381,9 @@
   }
   .h-32 {
     height: calc(var(--spacing) * 32);
+  }
+  .h-48 {
+    height: calc(var(--spacing) * 48);
   }
   .h-full {
     height: 100%;
@@ -419,6 +430,9 @@
   .w-px {
     width: 1px;
   }
+  .max-w-24 {
+    max-width: calc(var(--spacing) * 24);
+  }
   .max-w-xl {
     max-width: var(--container-xl);
   }
@@ -429,8 +443,14 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -447,8 +467,14 @@
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-3\.5 {
     gap: calc(var(--spacing) * 3.5);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -475,6 +501,9 @@
   .gap-x-10 {
     column-gap: calc(var(--spacing) * 10);
   }
+  .gap-y-2 {
+    row-gap: calc(var(--spacing) * 2);
+  }
   .divide-y {
     :where(& > :not(:last-child)) {
       --tw-divide-y-reverse: 0;
@@ -488,6 +517,9 @@
     :where(& > :not(:last-child)) {
       border-color: var(--color-gray-100);
     }
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -547,6 +579,9 @@
   .object-contain {
     object-fit: contain;
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -582,6 +617,9 @@
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
+  }
+  .pb-12 {
+    padding-bottom: calc(var(--spacing) * 12);
   }
   .pb-40 {
     padding-bottom: calc(var(--spacing) * 40);
@@ -791,6 +829,11 @@
       margin-top: calc(var(--spacing) * -20);
     }
   }
+  .md\:mt-4 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 4);
+    }
+  }
   .md\:mb-12 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 12);
@@ -811,6 +854,11 @@
       height: calc(var(--spacing) * 48);
     }
   }
+  .md\:h-64 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 64);
+    }
+  }
   .md\:min-h-screen {
     @media (width >= 48rem) {
       min-height: 100vh;
@@ -826,9 +874,24 @@
       width: calc(var(--spacing) * 48);
     }
   }
+  .md\:max-w-44 {
+    @media (width >= 48rem) {
+      max-width: calc(var(--spacing) * 44);
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:gap-5 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:gap-8 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 8);
     }
   }
   .md\:rounded-t-\[4rem\] {
@@ -855,6 +918,11 @@
   .md\:pb-14 {
     @media (width >= 48rem) {
       padding-bottom: calc(var(--spacing) * 14);
+    }
+  }
+  .md\:pb-20 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 20);
     }
   }
   .md\:pb-52 {
@@ -884,6 +952,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
+    }
+  }
+  .md\:text-lg {
+    @media (width >= 48rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .md\:text-sm {
