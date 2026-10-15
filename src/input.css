@@ -10,3 +10,16 @@
     background-image: url("../../public/images/headerBgMobile.webp");
   }
 }
+
+#top {
+  transition:
+    height 0.3s ease,
+    top 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  #top.scrolled {
+    height: 4rem;
+    top: 0.75rem;
+  }
+}

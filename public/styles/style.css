@@ -53,6 +53,15 @@
     background-image: url("../../public/images/headerBgMobile.webp");
   }
 }
+#top {
+  transition: height 0.3s ease, top 0.3s ease;
+}
+@media (min-width: 1024px) {
+  #top.scrolled {
+    height: 4rem;
+    top: 0.75rem;
+  }
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -299,6 +308,9 @@
   }
   .static {
     position: static;
+  }
+  .sticky {
+    position: sticky;
   }
   .inset-0 {
     inset: calc(var(--spacing) * 0);

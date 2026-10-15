@@ -61,3 +61,13 @@ if (navSidebar && cartSidebar && sidebarOverlay && openNavBtn) {
 document.querySelector("#mobile-theme").addEventListener("click", () => {
   toggleThemeBtn.click();
 });
+
+// Compact sticky header on scroll (desktop)
+const siteHeader = document.querySelector("#top");
+if (siteHeader) {
+  const onScroll = () => {
+    siteHeader.classList.toggle("scrolled", window.scrollY > 40);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
