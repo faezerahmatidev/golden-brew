@@ -62,6 +62,20 @@ document.querySelector("#mobile-theme").addEventListener("click", () => {
   toggleThemeBtn.click();
 });
 
+// Mobile sidebar shop submenu (accordion, collapsed by default)
+const shopToggle = document.querySelector("#shop-toggle");
+const shopSubmenu = document.querySelector("#shop-submenu");
+const shopChevron = document.querySelector("#shop-chevron");
+if (shopToggle && shopSubmenu) {
+  shopToggle.addEventListener("click", () => {
+    const nowHidden = shopSubmenu.classList.toggle("hidden");
+    shopToggle.setAttribute("aria-expanded", String(!nowHidden));
+    if (shopChevron) {
+      shopChevron.classList.toggle("rotate-180", !nowHidden);
+    }
+  });
+}
+
 // Compact sticky header on scroll (desktop)
 const siteHeader = document.querySelector("#top");
 if (siteHeader) {

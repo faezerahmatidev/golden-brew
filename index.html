@@ -573,18 +573,27 @@
           صفحه اصلی
         </a>
         <div class="mt-1">
-          <a href="#" class="flex items-center justify-between px-4 py-3">
+          <button
+            type="button"
+            id="shop-toggle"
+            aria-expanded="false"
+            aria-controls="shop-submenu"
+            class="flex items-center justify-between w-full px-4 py-3 cursor-pointer"
+          >
             <span class="flex items-center gap-x-3">
               <svg class="w-6 h-6">
                 <use href="#shopping-bag"></use>
               </svg>
               فروشگاه
             </span>
-            <svg class="w-4 h-4">
+            <svg id="shop-chevron" class="w-4 h-4 transition-transform">
               <use href="#chevron-down"></use>
             </svg>
-          </a>
-          <div class="pr-13 space-y-3 py-2 text-sm text-zinc-500 dark:text-gray-300">
+          </button>
+          <div
+            id="shop-submenu"
+            class="hidden pr-13 space-y-3 py-2 text-sm text-zinc-500 dark:text-gray-300"
+          >
             <a href="#" class="block">قهوه ویژه</a>
             <a href="#" class="flex items-center gap-x-2 text-orange-300">
               <span class="block w-1.5 h-1.5 rounded-full bg-orange-300"></span>
