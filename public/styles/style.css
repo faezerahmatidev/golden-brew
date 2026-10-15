@@ -1053,8 +1053,8 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-\[0\.06\] {
-    opacity: 0.06;
+  .opacity-10 {
+    opacity: 10%;
   }
   .shadow-normal {
     --tw-shadow: 0 1px 10px var(--tw-shadow-color, rgba(0, 0, 0, 0.05));
@@ -1725,9 +1725,9 @@
       color: var(--color-white);
     }
   }
-  .dark\:opacity-20 {
+  .dark\:opacity-30 {
     &:where(.dark, .dark *) {
-      opacity: 20%;
+      opacity: 30%;
     }
   }
   .dark\:brightness-\[2\] {
